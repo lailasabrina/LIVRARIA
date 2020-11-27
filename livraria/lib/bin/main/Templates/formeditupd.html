@@ -1,0 +1,17 @@
+<!DOCTYPE hmtl>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<form action="#" th:action="@{'/upde/'+${id}}" method=post>
+		Nome da editora: <input type="text" th:field="${outro.nomeEdit}">
+		Telefone da editora: <input type="text" th:field="*{outro.telefone}">
+		E-mail da editora: <input type="text" th:field="*{outro.emailEdit}">
+		<input type="submit" value="Cadastrar">
+	</form>
+
+</body>
+</html>

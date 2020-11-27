@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+<body>
+
+	<h1 th:text="${nome}"></h1>
+
+	<nav>
+		<ul>
+		
+			<li>
+				<a th:href=@{/livro}> Cadastrar livros </a>
+			</li>
+			
+			<li>
+				<a th:href=@{/editora}> Cadastrar editoras </a>
+			</li>
+			
+			<li>
+				<a th:href=@{/autor}> Cadastrar autores </a>
+			</li>
+			
+			<li>
+				<a th:href=@{/livros}> Listar livros </a>
+			</li>
+			
+			<li>
+				<a th:href=@{/editoras}> Listar editoras </a>
+			</li>
+			
+			<li>
+				<a th:href=@{/autores}> Listar autores </a>
+			</li>
+			
+		</ul>
+	</nav>
+
+</body>
+</html>

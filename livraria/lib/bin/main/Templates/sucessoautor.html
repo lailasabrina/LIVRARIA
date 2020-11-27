@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sucesso</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<h1>Autor(a) cadastrado(a)!</h1>
+	<div th:text="'Nome: ' + ${autor.nomeAut}"></div>
+	<div th:text="'E-mail: ' + ${autor.emailAut}"></div>
+	<a href="/">Voltar</a>
+
+</body>
+</html>

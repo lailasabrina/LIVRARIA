@@ -1,0 +1,16 @@
+<!DOCTYPE hmtl>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulário!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<form action="#" th:action="@{'/upda/'+${idAut}}" method=post>
+		Nome do(a) autor(a): <input type="text" th:field="${novo.nomeAut}">
+		E-mail do(a) autor(a): <input type="text" th:field="${novo.emailAut}">
+		<input type="submit" value="Cadastrar">
+	</form>
+
+</body>
+</html>
