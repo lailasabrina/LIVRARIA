@@ -1,31 +1,85 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Home</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Livraria · Bootstrap</title>
 
-	<h1 th:text="${nome}"></h1>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/navbars/">
 
-	<nav>
-		<ul>
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-			<li><a th:href=@{/livro}> Cadastrar livros </a></li>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-			<li><a th:href=@{/editora}> Cadastrar editoras </a></li>
-
-			<li><a th:href=@{/autor}> Cadastrar autores </a></li>
-
-			<li><a th:href=@{/livros}> Listar livros </a></li>
-
-			<li><a th:href=@{/editoras}> Listar editoras </a></li>
-
-			<li><a th:href=@{/autores}> Listar autores </a></li>
-
-		</ul>
-	</nav>
-
-</body>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Livraria Laila</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="/autor">Autor </a>
+              <a class="dropdown-item" href="/editora">Editora </a>
+              <a class="dropdown-item" href="/livro">Livro </a>            
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="/livros">Livros Cadastrados </a>
+              <a class="dropdown-item" href="/editoras">Editoras Cadastrados </a>
+              <a class="dropdown-item" href="/autores">Autores Cadastrados </a>           
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  <main role="main">
+    <div class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1>Livraria da Laila</h1>
+        <p>Livraria Laila, Laila Livraria, Livraria Laila, Laila Livraria, Livraria Laila, Laila Livraria, Livraria Laila, Laila Livraria .</p>
+        <p>Dos mesmo produtores de Cabeleleira leila.</p>
+        <p>
+          <a class="btn btn-primary" href="/" role="button">vejaaa &raquo;</a>
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+      <script src="js/bootstrap.bundle.min.js"></script>
 </html>
