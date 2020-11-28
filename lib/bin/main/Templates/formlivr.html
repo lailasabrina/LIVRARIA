@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Formulário!</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Checkout example · Bootstrap</title>
 
-	<form action="#" th:action="@{/livro}" th:object="${livro}" method=post>
-		Nome do livro: <input type="text" th:field="*{nome}"> Edição
-		do livro: <input type="text" th:field="*{edicao}"> Valor do
-		livro: <input type="text" th:field="*{valor}"> <input
-			type="submit" value="Cadastrar">
-	</form>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
 
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .order-md-1 {
+      	margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+    <div class="container">
+  
+  <div class="row">
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Cadastro Livro</h4>
+      <form class="needs-validation" action="#" th:action="@{/livro}" th:object="${livro}" method=post novalidate>
+        <div class="mb-3">
+          <label for="username">Nome do livro:</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" th:field="*{nome}" class="form-control" placeholder="Ex.: Uma introdução à programação funcional" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              O nome do livro é obrigatório.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Edição do Livro</label>
+            <input type="text" th:field="*{edicao}" class="form-control" placeholder="Ex.: Primeira edição" value="" required>
+            <div class="invalid-feedback">
+              Edição do Livro é obrigatória
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Valor do Livro</label>
+            <input type="number" step="0.01" class="form-control" id="lastName" placeholder="" value="" required>
+            <div class="invalid-feedback">
+              Preço é obrigatório
+            </div>
+          </div>
+        </div>
+
+    
+        <hr class="mb-4">
+
+        <div class="row">
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit" value="cadastrar">Cadastrar Livro</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2017-2020 Company Name</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+</div>
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/form-validation.js"></script>
