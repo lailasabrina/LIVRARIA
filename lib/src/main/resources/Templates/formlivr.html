@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Formulário!</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formulário!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 
 	<form action="#" th:action="@{/livro}" th:object="${livro}" method=post>
-		Nome do livro: <input type="text" th:field="*{nome}">
-		Edição do livro: <input type="text" th:field="*{edicao}">
-		Valor do livro: <input type="text" th:field="*{valor}">
-		<input type="submit" value="Cadastrar">
+		Nome do livro: <input type="text" th:field="*{nome}"> Edição
+		do livro: <input type="text" th:field="*{edicao}"> Valor do
+		livro: <input type="text" th:field="*{valor}"> <input
+			type="submit" value="Cadastrar">
 	</form>
 
 </body>
