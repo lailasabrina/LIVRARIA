@@ -1,16 +1,131 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Formulário!</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Livraria · Autor</title>
 
-	<form action="#" th:action="@{/autor}" th:object="${autor}" method=post>
-		Nome do(a) autor(a): <input type="text" th:field="*{nomeAut}">
-		E-mail do(a) autor(a): <input type="text" th:field="*{emailAut}">
-		<input type="submit" value="Cadastrar">
-	</form>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
 
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      
+      .order-md-1 {
+      	margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/form-validation.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Livraria <i>Boa Noite</i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastrar</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="/livro">Livro </a>
+			  <a class="dropdown-item" href="/editora">Editora </a>  
+              <a class="dropdown-item" href="/autor">Autor </a>          
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listar</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown04">
+              <a class="dropdown-item" href="/livros">Livros Cadastrados </a>
+              <a class="dropdown-item" href="/editoras">Editoras Cadastrados </a>
+              <a class="dropdown-item" href="/autores">Autores Cadastrados </a>           
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+  
+  <div class="row">
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Cadastro Autor</h4>
+      <form class="needs-validation" action="#" th:action="@{/autor}" th:object="${autor}" method=post novalidate>
+        <div class="mb-3">
+          <label for="username">Nome do autor:</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" th:field="*{nomeAut}" class="form-control" placeholder="Nome completo do autor" required>
+            <div class="invalid-feedback" style="width: 100%;">
+              O nome do autor é obrigatório.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">E-mail do autor</label>
+            <input type="email" th:field="*{emailAut}" class="form-control" placeholder="Ex.: nome@exemplo.com" value="" required>
+            <div class="invalid-feedback">
+              Edição do Livro é obrigatória
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+          </div>
+        </div>
+
+    
+        <hr class="mb-4">
+
+        <div class="row">
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit" value="cadastrar">Cadastrar Autor</button>
+         <a class="btn btn-primary btn-lg btn-block" href="/">Voltar</a>
+      </form>
+    </div>
+  </div>
+
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2020 Company LIVRARIA BOA NOITE</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacidade</a></li>
+      <li class="list-inline-item"><a href="#">Termos</a></li>
+      <li class="list-inline-item"><a href="#">Suport</a></li>
+    </ul>
+  </footer>
+</div>
 </body>
 </html>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/form-validation.js"></script>
