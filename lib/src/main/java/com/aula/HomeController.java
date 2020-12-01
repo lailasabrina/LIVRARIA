@@ -18,5 +18,12 @@ public class HomeController {
 		model.addAttribute("nome", nome);
 		return "principal";
 	}
+	
+	@GetMapping("/sobre")
+	public String sobre(Model model) {
+		String nome = "Livraria Boa Noite";
+		model.addAttribute("nome", nome);
+		return "sobre";
+	}
 
 }
