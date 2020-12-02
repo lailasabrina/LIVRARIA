@@ -47,7 +47,7 @@ public class LivrariaDAO {
     } 
     
     public void updateLivro(int id, Livro livro) {
-    	String sql = "UPDATE livro SET edicao=?, valor=? WHERE  id=?";
+    	String sql = "UPDATE livro SET nome=?, edicao=?, valor=? WHERE  id=?";
     	 jdbc.update(sql, new Object[]{
          		livro.getNome(), livro.getEdicao(), livro.getValor(), id
          });

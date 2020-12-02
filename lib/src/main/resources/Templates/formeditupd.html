@@ -6,10 +6,10 @@
 </head>
 <body>
 
-	<form action="#" th:action="@{'/upde/'+${id}}" method=post>
+	<form action="#" th:action="@{'/upde/'+${idEdit}}" method=post>
 		Nome da editora: <input type="text" th:field="${outro.nomeEdit}">
-		Telefone da editora: <input type="text" th:field="*{outro.telefone}">
-		E-mail da editora: <input type="text" th:field="*{outro.emailEdit}">
+		Telefone da editora: <input type="text" th:field="${outro.telefone}">
+		E-mail da editora: <input type="text" th:field="${outro.emailEdit}">
 		<input type="submit" value="Cadastrar">
 	</form>
 	<a  href="/editoras">Voltar</a>

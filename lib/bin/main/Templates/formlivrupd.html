@@ -7,6 +7,7 @@
 <body>
 
 	<form action="#" th:action="@{'/upd/'+${id}}" method=post>
+		Nome do livro: <input type="text" th:field="${antigo.nome}">
 		Edição do livro: <input type="text" th:field="${antigo.edicao}">
 		Valor do livro: <input type="text" th:field="${antigo.valor}">
 		<input type="submit" value="Cadastrar">
